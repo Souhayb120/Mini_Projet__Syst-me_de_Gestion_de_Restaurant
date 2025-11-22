@@ -1,11 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 public class Plate {
+    private static int count = 1;
+    private int id;
     private String nom;
     private double prix;
     private boolean special = false;
     private List<Commande> commandes;
+    
     public Plate(String nom, double prix, boolean special) {
+        this.id = count++;
         this.nom = nom;
         this.prix = prix;
         this.special = special ;
@@ -28,6 +32,10 @@ public class Plate {
         this.prix = prix;
     }
 
+     public double getId() {
+        return id;
+    }
+
     public boolean getSpecial() {
         return special;
     }
@@ -42,13 +50,6 @@ public class Plate {
 
     public void setCommandes(List<Commande> commandes) {
         this.commandes = commandes;
-    }
-    public void afficherType(){
-        if(special){
-            System.out.println(nom + "This plat special");
-        }else {
-            System.out.println(nom + "This plat non special");
-        }
     }
 
 

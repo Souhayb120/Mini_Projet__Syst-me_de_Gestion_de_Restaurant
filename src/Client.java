@@ -2,12 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Client {
+    private static int count = 1;
     private int id;
     private String nom;
     private List<Commande> commandes;
 
-    public Client(int id, String nom) {
-        this.id = id;
+    public Client( String nom) {
+        this.id = count++;
         this.nom = nom;
         this.commandes = new ArrayList<>();
     }

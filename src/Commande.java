@@ -32,13 +32,14 @@ public class Commande {
     }
 
 
-//    public void calculatTotal(){
-//
-//    }
-//
-//    public void calculatTotal(){
-//
-//    }
+   public double calculatTotal(){
+    total = 0;
+   for(Plate plate : platList){
+    total += plate.getPrix();
+   }
+   return total;
+   }
+
 
     public void afficheDetails(){
 
