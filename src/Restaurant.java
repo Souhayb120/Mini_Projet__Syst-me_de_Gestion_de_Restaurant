@@ -16,6 +16,10 @@ public class Restaurant {
     public void ajouterPlatMenu(Plate plat) {
         menu.add(plat);
     }
+     public void deletePlatMenu(Plate plat) {
+        menu.remove(plat);
+        System.out.println(plat.getNom() + " removed successfully !!");
+    }
 
     public void afficherMenu() {
         System.out.println("Menu du restaurant " + nom + ":");

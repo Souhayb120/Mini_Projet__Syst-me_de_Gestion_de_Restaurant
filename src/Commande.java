@@ -22,6 +22,7 @@ public class Commande {
     public void ajouterPlate(Plate p){
         this.platList.add(p);
     }
+    
 
     public void ajouterClient(Client client){
         this.client = client;
